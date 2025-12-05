@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandde-Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+
+
+    <header class="bg-none">
+        <nav id="main-nav" class="fixed w-full z-20 top-0 start-0 transition-colors duration-300 text-white">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-6">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img id="nav-logo" src="/components/brandde-logo-white.png" class="h-7" alt="Brandde Logo" />
+                </a>
+
+                <!-- Right side buttons (desktop) -->
+                <div class="hidden md:flex items-center space-x-4 md:order-2">
+                    <button id="nav-login"
+                        class="nav-btn-outline rounded-full px-6 py-2 text-sm font-medium border border-white text-white transition-colors duration-300">
+                        Login
+                    </button>
+                    <button id="nav-signup"
+                        class="nav-btn-solid rounded-full px-6 py-2 text-sm font-medium bg-white text-[#243CF4] transition-colors duration-300">
+                        Sign Up
+                    </button>
+                </div>
+
+                <!-- Hamburger -->
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-9 h-9 justify-center text-sm rounded-base md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                            d="M5 7h14M5 12h14M5 17h14" />
+                    </svg>
+                </button>
+
+                <!-- Nav links -->
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 space-y-2 md:space-y-0 md:flex-row md:space-x-8 md:mt-0">
+                        <li>
+                            <a href="#" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent"
+                                data-active="true">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#create-event"
+                                class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                Create an Event
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#create-dp" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                Create A DP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ticket" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                My Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#features" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                Features
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <!-- Hero page -->
+
+
+
+
+    <section class="min-h-[650px]
+         bg-[linear-gradient(135deg,_#000000cc_0%,_#243CF4cc_100%),url('./components/herobg.png')]
+         bg-cover bg-center bg-no-repeat
+         px-6 py-10 md:px-20 md:py-20 flex flex-col justify-between">
+
+        <!-- Hero Content -->
+
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 md:mt-16">
+            <a href="#"
+                class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 mt-6 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                role="alert">
+                <span class="text-xs bg-white-600 rounded-full text-white px-4 py-1.5 mr-3">New</span>
+                <span class="text-sm font-medium">Are you in Abuja! See what's new</span>
+                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+                Powering Your Events
+            </h1>
+
+            <p class="mb-8 text-lg font-normal text-gray-100 lg:text-xl sm:px-16 xl:px-48">
+                Conference . Summit . Concert . Webinar . And Others <br>
+                Connecting The Dot Of Your Audience.
+            </p>
+
+            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <button type="button"
+                    class="bg-pink-600 text-white hover:bg-pink-700 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
+                    Get Ticket
+                </button>
+
+                <button type="button"
+                    class="text-blue-600 bg-white border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
+                    Get Branded DP
+                </button>
+            </div>
+
+
+
+        </div>
+
+
+
+        <!-- Hero Search Form -->
+
+
+        <div class="w-full flex justify-center">
+            <div class="w-full max-w-[1086px] bg-[#151B60] text-white
+           rounded-[32px] px-8 py-6 md:px-12 md:py-8
+           shadow-lg flex flex-col gap-6 md:flex-row md:items-end md:gap-10">
+
+                <!-- Search Event -->
+                <div class="flex-1">
+                    <p class="text-sm text-white/70 mb-2">Search Event</p>
+                    <input type="text" placeholder="Nigeria @65" class="w-full bg-transparent border-b border-white/40
+               focus:border-white outline-none
+               text-lg font-semibold placeholder:text-white" />
+                </div>
+
+                <!-- Place -->
+                <div class="flex-1">
+                    <p class="text-sm text-white/70 mb-2">Place</p>
+                    <input type="text" placeholder="Abuja" class="w-full bg-transparent border-b border-white/40
+               focus:border-white outline-none
+               text-lg font-semibold placeholder:text-white" />
+                </div>
+
+                <!-- Time -->
+                <div class="flex-1 relative">
+                    <p class="text-sm text-white/70 mb-2">Time</p>
+                    <select class="w-full bg-transparent border-b border-white/40
+               focus:border-white outline-none
+               text-lg font-semibold appearance-none pr-8">
+                        <option>Any date</option>
+                        <option>Today</option>
+                        <option>This week</option>
+                        <option>This month</option>
+                    </select>
+                    <!-- dropdown icon -->
+                    <span class="pointer-events-none absolute right-0 bottom-2.5">
+                        ▼
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Event row Title  -->
+
+
+
+    <section class="mt-32 px-6 md:px-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+                <!-- Left: title -->
+                <h2 class="text-3xl md:text-4xl font-bold text-[#242565]">
+                    Upcoming Events
+                </h2>
+
+                <!-- Right: filter pills -->
+                <div class="flex flex-wrap gap-4">
+
+                    <!-- Weekdays -->
+                    <button id="filter-weekdays" type="button" class="inline-flex items-center justify-center
+                 bg-[#EFF2FF] text-[#242565]
+                 rounded-full px-6 md:px-8 py-2.5
+                 text-sm md:text-base font-medium
+                 border border-transparent
+                 hover:bg-[#E0E5FF] transition-colors">
+                        Weekdays
+                        <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 9-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Event Type -->
+                    <button id="filter-type" type="button" class="inline-flex items-center justify-center
+                 bg-[#EFF2FF] text-[#242565]
+                 rounded-full px-6 md:px-8 py-2.5
+                 text-sm md:text-base font-medium
+                 border border-transparent
+                 hover:bg-[#E0E5FF] transition-colors">
+                        Event Type
+                        <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 9-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Any Category -->
+                    <button id="filter-category" type="button" class="inline-flex items-center justify-center
+                 bg-[#EFF2FF] text-[#242565]
+                 rounded-full px-6 md:px-8 py-2.5
+                 text-sm md:text-base font-medium
+                 border border-transparent
+                 hover:bg-[#E0E5FF] transition-colors">
+                        Any Category
+                        <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 9-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Event Cards Section -->
+
+
+
+
+    <section class="px-6 md:px-20 flex justify-center">
+        <div class="w-full max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16 mt-16 justify-items-center">
+
+
+
+
+                <!-- Event Card 1 -->
+                <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-56 object-cover" src="/components/tedxmaitama.png" alt="TEDxMaitama" />
+                    </a>
+                    <div class="p-6 flex gap-6">
+                        <div class="text-center min-w-[60px]">
+                            <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Feb.
+                            </p>
+                            <p class="text-3xl font-bold leading-none text-gray-900">14</p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <h5 class="text-lg font-semibold tracking-tight text-gray-900">TEDxMaitama
+                                    Abuja, 2026</h5>
+                            </a>
+                            <p class="mt-3 text-sm text-gray-500">We'll get you directly seated and inside for
+                                you to enjoy
+                                the show.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-56 object-cover" src="/components/ngfest.png" alt="NGFest" />
+                    </a>
+                    <div class="p-6 flex gap-6">
+                        <div class="text-center min-w-[60px]">
+                            <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Mar.
+                            </p>
+                            <p class="text-3xl font-bold leading-none text-gray-900">01</p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <h5 class="text-lg font-semibold tracking-tight text-gray-900">NGFest Lagos,
+                                    2026</h5>
+                            </a>
+                            <p class="mt-3 text-sm text-gray-500">Join us for an unforgettable experience at
+                                NGFest Lagos
+                                2026!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-56 object-cover" src="/components/techsummit.png" alt="Tech Summit" />
+                    </a>
+                    <div class="p-6 flex gap-6">
+                        <div class="text-center min-w-[60px]">
+                            <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Apr.
+                            </p>
+                            <p class="text-3xl font-bold leading-none text-gray-900">22</p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <h5 class="text-lg font-semibold tracking-tight text-gray-900">Tech Summit
+                                    Abuja, 2026</h5>
+                            </a>
+                            <p class="mt-3 text-sm text-gray-500">Explore the future of technology at Tech
+                                Summit Abuja
+                                2026!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-56 object-cover" src="/components/tedxmaitama.png" alt="TEDxMaitama" />
+                    </a>
+                    <div class="p-6 flex gap-6">
+                        <div class="text-center min-w-[60px]">
+                            <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Feb.
+                            </p>
+                            <p class="text-3xl font-bold leading-none text-gray-900">14</p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <h5 class="text-lg font-semibold tracking-tight text-gray-900">TEDxMaitama
+                                    Abuja, 2026</h5>
+                            </a>
+                            <p class="mt-3 text-sm text-gray-500">We'll get you directly seated and inside for
+                                you to enjoy
+                                the show.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 -->
+                <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-56 object-cover" src="/components/ngfest.png" alt="NGFest" />
+                    </a>
+                    <div class="p-6 flex gap-6">
+                        <div class="text-center min-w-[60px]">
+                            <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Mar.
+                            </p>
+                            <p class="text-3xl font-bold leading-none text-gray-900">01</p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <h5 class="text-lg font-semibold tracking-tight text-gray-900">NGFest Lagos,
+                                    2026</h5>
+                            </a>
+                            <p class="mt-3 text-sm text-gray-500">Join us for an unforgettable experience at
+                                NGFest Lagos
+                                2026!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 -->
+                <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-56 object-cover" src="/components/techsummit.png" alt="Tech Summit" />
+                    </a>
+                    <div class="p-6 flex gap-6">
+                        <div class="text-center min-w-[60px]">
+                            <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Apr.
+                            </p>
+                            <p class="text-3xl font-bold leading-none text-gray-900">22</p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <h5 class="text-lg font-semibold tracking-tight text-gray-900">Tech Summit
+                                    Abuja, 2026</h5>
+                            </a>
+                            <p class="mt-3 text-sm text-gray-500">Explore the future of technology at Tech
+                                Summit Abuja
+                                2026!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mb-16">
+                <button
+                    class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    <span
+                        class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0 group-hover:text-white">
+                        Load More
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+    </div>
+    </section>
+
+
+
+
+
+
+    <!-- Call to Action -->
+
+
+
+
+
+    <section class="bg-[#E8ECFF] py-6 px-4">
+        <div class="max-w-6xl mx-auto
+           rounded-[32px]
+           flex flex-col md:flex-row items-center
+           gap-10 px-8 md:px-16 py-12">
+            <!-- Left: Illustration -->
+            <div class="w-full md:w-1/2">
+                <img src="/components/makeevent.png" alt="People collaborating on event" class="w-full h-auto" />
+            </div>
+
+            <!-- Right: Content -->
+            <div class="w-full md:w-1/2 space-y-5 text-center md:text-left">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                    Make your own Event
+                </h1>
+
+                <p class="text-base md:text-lg lg:text-xl text-gray-700">
+                    Power Your Events with
+                    <span class="text-blue-600 font-semibold">BRANDDE</span>
+                    ...... Connect the dot of your audience.
+                </p>
+
+                <button class="inline-flex items-center justify-center
+               bg-blue-600 hover:bg-blue-700
+               text-white font-semibold
+               text-sm md:text-base
+               px-10 md:px-12 py-3.5 md:py-4
+               rounded-full
+               transition-all duration-300
+               shadow-lg hover:shadow-xl">
+                    Create Events
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Our Partners and Brands -->
+
+
+
+
+
+
+
+    <section>
+        <div class="max-w-6xl mx-auto py-16 px-6 md:px-20">
+            <h2 class="text-[35px] font-bold text-heading text-center mb-2 text-[#242565]">Join these brands</h2>
+            <h6 class="font-normal text-gray-400 text-center mb-10"> We've had the pleasure of working with
+                industry-defining brands. These are just some of them.</h6>
+
+
+            <div class=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center justify-items-center">
+
+                <img src="/brands/Octalve Logo B.png" alt="Brand 1" class="h-12 object-contain" />
+                <img src="/brands/google.png" alt="Brand 1" class="h-12 object-contain" />
+                <img src="/brands/grab.png" alt="Brand 2" class="h-12 object-contain" />
+                <img src="/brands/medium.png" alt="Brand 3" class="h-12 object-contain" />
+                <img src="/brands/microsoft.png" alt="Brand 4" class="h-12 object-contain" />
+                <img src="/brands/spotify.png" alt="Brand 5" class="h-12 object-contain" />
+                <img src="/brands/stripe.png" alt="Brand 6" class="h-12 object-contain" />
+                <img src="/brands/uber.png" alt="Brand 4" class="h-12 object-contain" />
+                <img src="/brands/youtube.png" alt="Brand 5" class="h-12 object-contain" />
+                <img src="/brands/zoom.png" alt="Brand 6" class="h-12 object-contain" />
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Browse Categories -->
+
+
+
+
+
+
+
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Heading -->
+            <h2 class="text-[35px] font-bold text-center text-[#242565] mb-2">
+                Browse Categories
+            </h2>
+            <p class="font-normal text-gray-500 text-center mb-12">
+                Explore events by your favorite categories.
+            </p>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Card 1 -->
+                <div>
+                    <div class="overflow-hidden rounded-[24px]">
+                        <img src="/categories/business.png" alt="Business" class="w-full h-48 md:h-56 object-cover" />
+                    </div>
+                    <h5 class="mt-4 text-lg font-semibold text-[#242565]">
+                        Business
+                    </h5>
+                </div>
+
+                <!-- Card 2 -->
+                <div>
+                    <div class="overflow-hidden rounded-[24px]">
+                        <img src="/categories/tech.png" alt="Tech" class="w-full h-48 md:h-56 object-cover" />
+                    </div>
+                    <h5 class="mt-4 text-lg font-semibold text-[#242565]">
+                        Tech
+                    </h5>
+                </div>
+
+                <!-- Card 3 -->
+                <div>
+                    <div class="overflow-hidden rounded-[24px]">
+                        <img src="/categories/social.png" alt="Social" class="w-full h-48 md:h-56 object-cover" />
+                    </div>
+                    <h5 class="mt-4 text-lg font-semibold text-[#242565]">
+                        Social
+                    </h5>
+                </div>
+
+                <!-- Card 4 -->
+                <div>
+                    <div class="overflow-hidden rounded-[24px]">
+                        <img src="/categories/movement.png" alt="Movement" class="w-full h-48 md:h-56 object-cover" />
+                    </div>
+                    <h5 class="mt-4 text-lg font-semibold text-[#242565]">
+                        Movement
+                    </h5>
+                </div>
+
+                <!-- Card 5 -->
+                <div>
+                    <div class="overflow-hidden rounded-[24px]">
+                        <img src="/categories/artandculture.png" alt="Art and Culture"
+                            class="w-full h-48 md:h-56 object-cover" />
+                    </div>
+                    <h5 class="mt-4 text-lg font-semibold text-[#242565]">
+                        Art and Culture
+                    </h5>
+                </div>
+
+                <!-- Card 6 -->
+                <div>
+                    <div class="overflow-hidden rounded-[24px]">
+                        <img src="/categories/tedx.png" alt="TEDx" class="w-full h-48 md:h-56 object-cover" />
+                    </div>
+                    <h5 class="mt-4 text-lg font-semibold text-[#242565]">
+                        TEDx
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+    <footer class="bg-[#243CF4] text-white">
+        <div class="max-w-6xl mx-auto px-4 lg:px-0 py-16 space-y-12">
+
+            <!-- Top columns -->
+            <div class="grid gap-12 md:grid-cols-4">
+
+                <!-- Brand + description + social -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="/components/Brandde logo 1.png" alt="Brandde Logo" class="h-8" />
+                    </div>
+
+                    <p class="text-sm leading-relaxed max-w-xs">
+                        Brandde is a global self-service ticketing platform
+                        for live experiences that allows anyone to create,
+                        share, find and attend events that fuel their passions
+                        and enrich their lives.
+                    </p>
+
+                    <div class="flex items-center gap-3 pt-2">
+                        <!-- Facebook -->
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center text-white text-lg font-semibold">
+                            f
+                        </a>
+                        <!-- Twitter -->
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-[#1DA1F2] flex items-center justify-center text-white text-lg font-semibold">
+                            t
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-[#0A66C2] flex items-center justify-center text-white text-lg font-semibold">
+                            in
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Plan Events -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold">Plan Events</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Create and Set Up</a></li>
+                        <li><a href="#" class="hover:underline">Sell Tickets</a></li>
+                        <li><a href="#" class="hover:underline">Online RSVP</a></li>
+                        <li><a href="#" class="hover:underline">Online Events</a></li>
+                    </ul>
+
+                    <h3 class="pt-4 text-lg font-semibold">Brandde DP</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Create DP</a></li>
+                        <li><a href="#" class="hover:underline">Use DP</a></li>
+                    </ul>
+                </div>
+
+                <!-- Brandde -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold">Brandde</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">Press</a></li>
+                        <li><a href="#" class="hover:underline">Contact Us</a></li>
+                        <li><a href="#" class="hover:underline">Help Center</a></li>
+                        <li><a href="#" class="hover:underline">How it Works</a></li>
+                        <li><a href="#" class="hover:underline">Privacy</a></li>
+                        <li><a href="#" class="hover:underline">Terms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Stay in the Loop -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold">Stay In The Loop</h3>
+                    <p class="text-sm max-w-xs">
+                        Join our mailing list to stay in the loop with our newest
+                        for Event and concert.
+                    </p>
+
+                    <form class="pt-2">
+                        <div
+                            class="flex items-center bg-white rounded-full border-2 border-white overflow-hidden max-w-md">
+                            <input type="email" placeholder="Enter your email address.."
+                                class="flex-1 px-4 py-3 text-sm text-gray-700 placeholder-gray-400 focus:outline-none" />
+                            <button type="submit"
+                                class="px-6 py-3 bg-[#243CF4] text-white font-semibold text-sm whitespace-nowrap">
+                                Subscribe Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-white/20" />
+
+            <!-- Bottom copyright -->
+            <div class="flex justify-center">
+                <p class="text-sm font-medium">
+                    Copyright © 2026 Brandde
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Javascript  Path -->
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const nav = document.getElementById('main-nav');
+        const logo = document.getElementById('nav-logo');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const activeLink = document.querySelector('.nav-link[data-active="true"]');
+        const loginBtn = document.getElementById('nav-login');
+        const signupBtn = document.getElementById('nav-signup');
+
+        const whiteLogo = '/components/Brandde logo 1.png'; // on hero (dark bg)
+        const darkLogo = '/components/Brandde logo 2.png';   // on white bg
+
+        function setNavTop() {
+            nav.classList.remove('bg-white', 'shadow-md');
+            nav.classList.add('bg-transparent', 'text-white');
+
+            logo.src = whiteLogo;
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-[#243CF4]');
+                link.classList.add('text-white');
+                link.classList.remove('border-[#243CF4]');
+                link.classList.add('border-transparent');
+            });
+
+            if (activeLink) {
+                activeLink.classList.add('font-semibold', 'border-white');
+            }
+
+            // buttons on dark background
+            loginBtn.classList.remove('border-[#243CF4]', 'text-[#243CF4]');
+            loginBtn.classList.add('border-white', 'text-white');
+
+            signupBtn.classList.remove('bg-[#243CF4]', 'text-white');
+            signupBtn.classList.add('bg-white', 'text-[#243CF4]');
+        }
+
+        function setNavScrolled() {
+            nav.classList.add('bg-white', 'shadow-md', 'text-black');
+            nav.classList.remove('bg-transparent', 'text-white');
+
+            logo.src = darkLogo;
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-white', 'border-white');
+                link.classList.add('text-[#243CF4]');
+                link.classList.add('border-transparent');
+            });
+
+            if (activeLink) {
+                activeLink.classList.add('font-semibold', 'border-[#243CF4]');
+            }
+
+            // buttons on white background
+            loginBtn.classList.remove('border-white', 'text-white');
+            loginBtn.classList.add('border-[#243CF4]', 'text-[#243CF4]');
+
+            signupBtn.classList.remove('bg-white', 'text-[#243CF4]');
+            signupBtn.classList.add('bg-[#243CF4]', 'text-white');
+        }
+
+        function handleScroll() {
+            if (window.scrollY > 10) {
+                setNavScrolled();
+            } else {
+                setNavTop();
+            }
+        }
+
+        // initial state + listener
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+    </script>
+
+
+
+</body>
+
+</html>
