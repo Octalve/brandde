@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandde - Events Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+
+
+    <!-- Nav Bar -->
+
+
+    <header class="bg-blue-600">
+        <nav id="main-nav"
+            class=" bg-blue-600 fixed w-full z-20 top-0 start-0 transition-colors duration-300 text-white">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-6">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img id="nav-logo" src="/components/Brandde logo 1.png" class="h-7" alt="Brandde Logo" />
+                </a>
+
+                <!-- Right side buttons (desktop) -->
+                <div class="hidden md:flex items-center space-x-4 md:order-2">
+                    <button id="nav-login"
+                        class="nav-btn-outline rounded-full px-6 py-2 text-sm font-medium border border-white text-white transition-colors duration-300">
+                        Login
+                    </button>
+                    <button id="nav-signup"
+                        class="nav-btn-solid rounded-full px-6 py-2 text-sm font-medium bg-white text-[#243CF4] transition-colors duration-300">
+                        Sign Up
+                    </button>
+                </div>
+
+                <!-- Hamburger -->
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-9 h-9 justify-center text-sm rounded-base md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                            d="M5 7h14M5 12h14M5 17h14" />
+                    </svg>
+                </button>
+
+                <!-- Nav links -->
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 space-y-2 md:space-y-0 md:flex-row md:space-x-8 md:mt-0">
+                        <li>
+                            <a href="#" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent"
+                                data-active="true">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#create-event"
+                                class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                Create an Event
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#create-dp" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                Create A DP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ticket" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                My Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#features" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                Features
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link block py-2 px-3 md:p-0 border-b-2 border-transparent">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <!-- Event Short Bio -->
+    <section class="mt-16 px-6 md:px-20">
+        <div class="max-w-6xl mx-auto py-10">
+
+            <!-- Back + title -->
+            <div class="flex items-center gap-2 mb-6 text-[#242565]">
+                <button class="p-2 rounded-full hover:bg-gray-100">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <span class="text-lg font-medium">Event</span>
+            </div>
+
+            <!-- Card -->
+            <div class="bg-white rounded-[32px] shadow-xl overflow-hidden
+             flex flex-col md:flex-row">
+
+                <!-- Image -->
+                <div class="md:w-1/2">
+                    <img src="/components/tedxmaitama.png" alt="TEDxMaitama" class="w-full h-full object-cover" />
+                </div>
+
+                <!-- Right content -->
+                <div class="md:w-1/2 flex flex-col justify-between gap-6
+               p-6 md:p-10">
+
+                    <!-- Date + title -->
+                    <div class="flex gap-6">
+                        <!-- Date -->
+                        <div class="text-center min-w-[60px]">
+                            <p class="text-xs font-semibold tracking-[0.18em] text-[#5C6BFF] uppercase">
+                                Sep.
+                            </p>
+                            <p class="text-3xl font-bold leading-none text-[#242565]">
+                                14
+                            </p>
+                        </div>
+
+                        <!-- Title -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-[#242565]">
+                                TEDxMaitama Abuja 2026
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-sm md:text-base text-gray-500 leading-tight">
+                        We’ll get you directly seated and inside for you to enjoy the show. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Unde nam praesentium, illo harum vel veniam saepe iste iure
+                        numquam officia cum quis. Unde, beatae ex veniam molestias enim veritatis quam! Lorem ipsum,
+                        dolor sit amet consectetur adipisicing elit. At repudiandae, dolor nemo, consequatur
+                        consequuntur placeat voluptatum velit sint cupiditate qui perspiciatis reiciendis omnis dolore
+                        saepe delectus unde eaque ad sunt. <a href="#" class="text-pink-500 font-semibold">Explore
+                            More</a>
+                    </p>
+
+                    <!-- Ticket + actions -->
+                    <div class="flex items-center justify-between gap-4">
+                        <button class="bg-[#243CF4] hover:bg-[#1b2dcc] text-white font-semibold
+                   px-10 py-3 rounded-2xl text-sm md:text-base
+                   shadow-md transition-colors">
+                            Ticket
+                        </button>
+
+
+
+
+                        <!-- Modal toggle -->
+                        <button data-modal-target="static-modal" data-modal-toggle="static-modal"
+                            class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+                            type="button">
+                            Toggle modal
+                        </button>
+
+                        <!-- Main modal -->
+                        <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                <!-- Modal content -->
+                                <div
+                                    class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
+                                    <!-- Modal header -->
+                                    <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
+                                        <h3 class="text-lg font-medium text-heading">
+                                            Static modal
+                                        </h3>
+                                        <button type="button"
+                                            class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                                            data-modal-hide="static-modal">
+                                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M6 18 17.94 6M18 18 6.06 6" />
+                                            </svg>
+                                            <span class="sr-only">Close modal</span>
+                                        </button>
+                                    </div>
+                                    <!-- Modal body -->
+                                    <div class="space-y-4 md:space-y-6 py-4 md:py-6">
+                                        <p class="leading-relaxed text-body">
+                                            With less than a month to go before the European Union enacts new consumer
+                                            privacy laws for its
+                                            citizens, companies around the world are updating their terms of service
+                                            agreements to comply.
+                                        </p>
+                                        <p class="leading-relaxed text-body">
+                                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into
+                                            effect on May 25 and is
+                                            meant to ensure a common set of data rights in the European Union. It
+                                            requires organizations to
+                                            notify users as soon as possible of high-risk data breaches that could
+                                            personally affect them.
+                                        </p>
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
+                                        <button data-modal-hide="static-modal" type="button"
+                                            class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">I
+                                            accept</button>
+                                        <button data-modal-hide="static-modal" type="button"
+                                            class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Decline</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="flex items-center gap-3">
+                            <!-- Heart -->
+                            <button class="w-10 h-10 rounded-full bg-white border border-gray-200
+                     flex items-center justify-center text-pink-500 shadow-sm">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 21s-4.35-3.21-7.05-5.91C3.11 13.26 2 11.86 2 10.09 2 7.94 3.63 6 5.9 6c1.23 0 2.41.57 3.1 1.47A4.01 4.01 0 0 1 12 6c1.23 0 2.41.57 3.01 1.47A3.76 3.76 0 0 1 18.1 6C20.37 6 22 7.94 22 10.09c0 1.77-1.11 3.17-2.95 4.99C16.35 17.79 12 21 12 21z" />
+                                </svg>
+                            </button>
+
+                            <!-- Bookmark -->
+                            <button class="w-10 h-10 rounded-full bg-white border border-gray-200
+                     flex items-center justify-center text-gray-500 shadow-sm">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6 4.5v15l6-3 6 3v-15A1.5 1.5 0 0 0 16.5 3h-9A1.5 1.5 0 0 0 6 4.5z" />
+                                </svg>
+                            </button>
+
+                            <!-- Share / upload -->
+                            <button class="w-10 h-10 rounded-full bg-white border border-gray-200
+                     flex items-center justify-center text-gray-500 shadow-sm">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 5v10m0-10 4 4m-4-4-4 4M5 19h14" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- More details about the event -->
+
+    <section class="mt-16 px-6 md:px-20">
+        <hr>
+
+        <div class="max-w-6xl mx-auto mt-10 mb-20
+       grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <!-- Left column -->
+            <div class="md:col-span-2 flex flex-col gap-8">
+
+                <!-- About the event -->
+                <div>
+                    <h3 class="text-xl font-semibold text-[#242565] mb-4">
+                        About the Event
+                    </h3>
+                    <p class="text-gray-500 leading-tight mb-4">
+                        We’ll get you directly seated and inside for you to enjoy the show. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Unde nam praesentium, illo harum vel veniam saepe iste iure
+                        numquam officia cum quis. Unde, beatae ex veniam molestias enim veritatis quam! Lorem ipsum,
+                        dolor sit amet consectetur adipisicing elit. At repudiandae, dolor nemo, consequatur
+                        consequuntur placeat voluptatum velit sint cupiditate qui perspiciatis reiciendis omnis dolore
+                        saepe delectus unde eaque ad sunt. orem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris id id velit condimentum. Nec euismod vel, hac amet.
+                        Velit, pharetra amet ac ante purus eu gravida. </p>
+
+                    <p class="text-gray-500 leading-tight">
+                        Convallis sollicitudin
+                        morbi neque leo
+                        duis
+                        et
+                        morbi dignissim. Posuere
+                        sapien maecenas nibh ullamcorper dignissim imperdiet et. Nibh ut in pretium fringilla dolor
+                        pellentesque blandit magna
+                        faucibus.
+                        Quam aliquam orci feugiat tincidunt rhoncus purus donec. Fames orci vulputate gravida lacus,
+                        massa nibh est et.
+                        Pellentesque volutpat purus eget tortor. Eget imperdiet purus nulla eu pharetra porttitor
+                        sociis. Rutrum sed nulla massa
+                        ipsum, pellentesque risus sed mollis nibh. Aliquam amet, amet condimentum tellus nisl, feugiat.
+                        Nisi vel platea etiam
+                        eget consectetur nisl, fermentum id. Sed duis massa elit massa at amet, mattis tincidunt
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-[#242565] mb-1">
+                        Afternoon:
+                    </h3>
+                    <pre class="text-gray-500 leading-tight  text-wrap">
+Why do we need cryptocurrency? 
+Cryptocurrency and NFT: risk or reward?
+How to trade and invest in cryptocurrencies
+Cryptocurrency and stock trading
+Cryptocurrency central exchange and decentralized Trading
+Storing Crypto – Cold Wallets, Paper Wallets, Hot Wallets.
+How to use technical indicators to predict the price of cryptocurrency
+Institutionalization and supervision process of encryption Market
+If you want to join this exhibition as an exhibitor or speaker
+
+Contact us
+Email：info@tedx.com
+twinkle@tedx.com
+WhatsApp：+1 138302397
+Telegram：+1 1376720997
+                    </pree>
+                </div>
+
+                <!-- Event Location -->
+                <div>
+                    <h3 class="text-xl font-semibold text-[#242565] mb-4">
+                        Event Location
+                    </h3>
+                    <p class="text-gray-500 leading-tight">
+                        Abuja International Conference Centre, Central Business District, Abuja, Nigeria.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right column -->
+            <div class="flex flex-col gap-6">
+
+                <!-- Date & Time -->
+                <div class="bg-white rounded-2xl shadow-md p-6">
+                    <h4 class="text-lg font-semibold text-[#242565] mb-4">
+                        Date & Time
+                    </h4>
+                    <p class="text-gray-500 leading-tight">
+                        September 14, 2023
+                        <br>
+                        10:00 AM - 4:00 PM
+                    </p>
+                </div>
+
+                <!-- Organizer -->
+                <div class="bg-white rounded-2xl shadow-md p-6">
+                    <h4 class="text-lg font-semibold text-[#242565] mb-4">
+                        Organizer
+                    </h4>
+                    <p class="text-gray-500 leading-tight">
+                        TEDxMaitama Team
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+  <!-- Ticket + actions -->
+                    <div class="flex items-center justify-between gap-4 mx-auto max-w-6xl mb-20">
+                        <button class="bg-[#243CF4] hover:bg-[#1b2dcc] text-white font-semibold
+                   px-10 py-3 rounded-2xl text-sm md:text-base
+                   shadow-md transition-colors">
+                            Ticket
+                        </button>
+
+                        <div class="flex items-center gap-3">
+                            <!-- Heart -->
+                            <button class="w-10 h-10 rounded-full bg-white border border-gray-200
+                     flex items-center justify-center text-pink-500 shadow-sm">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 21s-4.35-3.21-7.05-5.91C3.11 13.26 2 11.86 2 10.09 2 7.94 3.63 6 5.9 6c1.23 0 2.41.57 3.1 1.47A4.01 4.01 0 0 1 12 6c1.23 0 2.41.57 3.01 1.47A3.76 3.76 0 0 1 18.1 6C20.37 6 22 7.94 22 10.09c0 1.77-1.11 3.17-2.95 4.99C16.35 17.79 12 21 12 21z" />
+                                </svg>
+                            </button>
+
+                            <!-- Bookmark-->
+                            <button class="w-10 h-10 rounded-full bg-white border border-gray-200
+                     flex items-center justify-center text-gray-500 shadow-sm">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6 4.5v15l6-3 6 3v-15A1.5 1.5 0 0 0 16.5 3h-9A1.5 1.5 0 0 0 6 4.5z" />
+                                </svg>
+                            </button>
+
+                            <!-- Share / upload -->
+                            <button class="w-10 h-10 rounded-full bg-white border border-gray-200
+                     flex items-center justify-center text-gray-500 shadow-sm">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 5v10m0-10 4 4m-4-4-4 4M5 19h14" />
+                                </svg>
+                            </button>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<!-- Map and Share Section -->
+
+
+
+
+    <section class="mt-16 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-[2fr,1fr] items-end">
+
+        <!-- Map -->
+        <div class="rounded-[32px] overflow-hidden shadow-md h-[320px] md:h-[380px]">
+            <!-- Use an iframe (Google Maps) or a static image -->
+            <!-- Option 1: iframe (replace src with your real map embed link) -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019910985647!2d-122.4217785244534!3d37.7749293797597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5dcb37d9%3A0x6c3a0b8b0d0e4c7b!2sCivic%20Center!5e0!3m2!1sen!2sng!4v0000000000000"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+
+            <!-- Option 2: if you have a map image instead:
+      <img src="/components/map.png" alt="Map" class="w-full h-full object-cover">
+      -->
+        </div>
+
+        <!-- Right side: text + icons -->
+        <div class="space-y-10">
+            <!-- Get Direction -->
+            <div>
+                <h3 class="text-xl md:text-2xl font-semibold text-[#242565] mb-2">
+                    Get Direction
+                </h3>
+                <p class="text-sm text-gray-500">
+                    Find the easiest route to the venue and plan your trip ahead of time.
+                </p>
+            </div>
+
+            <!-- Share With Friend -->
+            <div>
+                <h3 class="text-xl md:text-2xl font-semibold text-[#242565] mb-4">
+                    Share With Friend
+                </h3>
+                <div class="flex items-center gap-3">
+                    <!-- Facebook -->
+                    <a href="#"
+                        class="w-10 h-10 rounded-md bg-[#1877F2] flex items-center justify-center text-white text-xl font-bold"
+                        aria-label="Share on Facebook">
+                        f
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="#" class="w-10 h-10 rounded-md bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF]
+                   flex items-center justify-center text-white text-xl font-bold" aria-label="Share on Instagram">
+                        <span class="text-base font-semibold">IG</span>
+                    </a>
+
+                    <!-- Twitter / X -->
+                    <a href="#"
+                        class="w-10 h-10 rounded-md bg-[#1DA1F2] flex items-center justify-center text-white text-xl font-bold"
+                        aria-label="Share on Twitter">
+                        t
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#"
+                        class="w-10 h-10 rounded-md bg-[#0A66C2] flex items-center justify-center text-white text-xl font-bold"
+                        aria-label="Share on LinkedIn">
+                        in
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Event row Title  -->
+
+
+
+<section class="mt-32 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <!-- Left: title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-[#242565]">
+                Upcoming Events
+            </h2>
+
+            <!-- Right: filter pills -->
+            <div class="flex flex-wrap gap-4">
+
+                <!-- Weekdays -->
+                <button id="filter-weekdays" type="button" class="inline-flex items-center justify-center
+                 bg-[#EFF2FF] text-[#242565]
+                 rounded-full px-6 md:px-8 py-2.5
+                 text-sm md:text-base font-medium
+                 border border-transparent
+                 hover:bg-[#E0E5FF] transition-colors">
+                    Weekdays
+                    <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 9-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <!-- Event Type -->
+                <button id="filter-type" type="button" class="inline-flex items-center justify-center
+                 bg-[#EFF2FF] text-[#242565]
+                 rounded-full px-6 md:px-8 py-2.5
+                 text-sm md:text-base font-medium
+                 border border-transparent
+                 hover:bg-[#E0E5FF] transition-colors">
+                    Event Type
+                    <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 9-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <!-- Any Category -->
+                <button id="filter-category" type="button" class="inline-flex items-center justify-center
+                 bg-[#EFF2FF] text-[#242565]
+                 rounded-full px-6 md:px-8 py-2.5
+                 text-sm md:text-base font-medium
+                 border border-transparent
+                 hover:bg-[#E0E5FF] transition-colors">
+                    Any Category
+                    <svg class="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 9-7 7-7-7" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Event Cards Section -->
+
+
+
+
+<section class="px-6 md:px-20 flex justify-center">
+    <div class="w-full max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16 mt-16 justify-items-center">
+
+
+
+
+            <!-- Event Card 1 -->
+            <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                <a href="#">
+                    <img class="w-full h-56 object-cover" src="/components/tedxmaitama.png" alt="TEDxMaitama" />
+                </a>
+                <div class="p-6 flex gap-6">
+                    <div class="text-center min-w-[60px]">
+                        <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Feb.
+                        </p>
+                        <p class="text-3xl font-bold leading-none text-gray-900">14</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">TEDxMaitama
+                                Abuja, 2026</h5>
+                        </a>
+                        <p class="mt-3 text-sm text-gray-500">We'll get you directly seated and inside for
+                            you to enjoy
+                            the show.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                <a href="#">
+                    <img class="w-full h-56 object-cover" src="/components/ngfest.png" alt="NGFest" />
+                </a>
+                <div class="p-6 flex gap-6">
+                    <div class="text-center min-w-[60px]">
+                        <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Mar.
+                        </p>
+                        <p class="text-3xl font-bold leading-none text-gray-900">01</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">NGFest Lagos,
+                                2026</h5>
+                        </a>
+                        <p class="mt-3 text-sm text-gray-500">Join us for an unforgettable experience at
+                            NGFest Lagos
+                            2026!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                <a href="#">
+                    <img class="w-full h-56 object-cover" src="/components/techsummit.png" alt="Tech Summit" />
+                </a>
+                <div class="p-6 flex gap-6">
+                    <div class="text-center min-w-[60px]">
+                        <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Apr.
+                        </p>
+                        <p class="text-3xl font-bold leading-none text-gray-900">22</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">Tech Summit
+                                Abuja, 2026</h5>
+                        </a>
+                        <p class="mt-3 text-sm text-gray-500">Explore the future of technology at Tech
+                            Summit Abuja
+                            2026!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                <a href="#">
+                    <img class="w-full h-56 object-cover" src="/components/tedxmaitama.png" alt="TEDxMaitama" />
+                </a>
+                <div class="p-6 flex gap-6">
+                    <div class="text-center min-w-[60px]">
+                        <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Feb.
+                        </p>
+                        <p class="text-3xl font-bold leading-none text-gray-900">14</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">TEDxMaitama
+                                Abuja, 2026</h5>
+                        </a>
+                        <p class="mt-3 text-sm text-gray-500">We'll get you directly seated and inside for
+                            you to enjoy
+                            the show.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 5 -->
+            <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                <a href="#">
+                    <img class="w-full h-56 object-cover" src="/components/ngfest.png" alt="NGFest" />
+                </a>
+                <div class="p-6 flex gap-6">
+                    <div class="text-center min-w-[60px]">
+                        <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Mar.
+                        </p>
+                        <p class="text-3xl font-bold leading-none text-gray-900">01</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">NGFest Lagos,
+                                2026</h5>
+                        </a>
+                        <p class="mt-3 text-sm text-gray-500">Join us for an unforgettable experience at
+                            NGFest Lagos
+                            2026!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 6 -->
+            <div class="bg-white block w-full max-w-sm rounded-[20px] shadow-md overflow-hidden">
+                <a href="#">
+                    <img class="w-full h-56 object-cover" src="/components/techsummit.png" alt="Tech Summit" />
+                </a>
+                <div class="p-6 flex gap-6">
+                    <div class="text-center min-w-[60px]">
+                        <p class="text-xs font-semibold tracking-[0.15em] text-indigo-600 uppercase">Apr.
+                        </p>
+                        <p class="text-3xl font-bold leading-none text-gray-900">22</p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900">Tech Summit
+                                Abuja, 2026</h5>
+                        </a>
+                        <p class="mt-3 text-sm text-gray-500">Explore the future of technology at Tech
+                            Summit Abuja
+                            2026!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mb-16">
+            <button
+                class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                <span
+                    class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0 group-hover:text-white">
+                    Load More
+                </span>
+            </button>
+        </div>
+    </div>
+</section>
+</div>
+</section>
+
+
+
+
+
+
+<!-- Call to Action -->
+
+
+
+
+
+<section class="bg-[#E8ECFF] py-6 px-4">
+    <div class="max-w-6xl mx-auto
+           rounded-[32px]
+           flex flex-col md:flex-row items-center
+           gap-10 px-8 md:px-16 py-12">
+        <!-- Left: Illustration -->
+        <div class="w-full md:w-1/2">
+            <img src="/components/makeevent.png" alt="People collaborating on event" class="w-full h-auto" />
+        </div>
+
+        <!-- Right: Content -->
+        <div class="w-full md:w-1/2 space-y-5 text-center md:text-left">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                Make your own Event
+            </h1>
+
+            <p class="text-base md:text-lg lg:text-xl text-gray-700">
+                Power Your Events with
+                <span class="text-blue-600 font-semibold">BRANDDE</span>
+                ...... Connect the dot of your audience.
+            </p>
+
+            <button class="inline-flex items-center justify-center
+               bg-blue-600 hover:bg-blue-700
+               text-white font-semibold
+               text-sm md:text-base
+               px-10 md:px-12 py-3.5 md:py-4
+               rounded-full
+               transition-all duration-300
+               shadow-lg hover:shadow-xl">
+                Create Events
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-[#243CF4] text-white">
+    <div class="max-w-6xl mx-auto px-4 lg:px-0 py-16 space-y-12">
+
+        <!-- Top columns -->
+        <div class="grid gap-12 md:grid-cols-4">
+
+            <!-- Brand + description + social -->
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img src="/components/Brandde logo 1.png" alt="Brandde Logo" class="h-8" />
+                </div>
+
+                <p class="text-sm leading-relaxed max-w-xs">
+                    Brandde is a global self-service ticketing platform
+                    for live experiences that allows anyone to create,
+                    share, find and attend events that fuel their passions
+                    and enrich their lives.
+                </p>
+
+                <div class="flex items-center gap-3 pt-2">
+                    <!-- Facebook -->
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center text-white text-lg font-semibold">
+                        f
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#1DA1F2] flex items-center justify-center text-white text-lg font-semibold">
+                        t
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#0A66C2] flex items-center justify-center text-white text-lg font-semibold">
+                        in
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan Events -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold">Plan Events</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Create and Set Up</a></li>
+                    <li><a href="#" class="hover:underline">Sell Tickets</a></li>
+                    <li><a href="#" class="hover:underline">Online RSVP</a></li>
+                    <li><a href="#" class="hover:underline">Online Events</a></li>
+                </ul>
+
+                <h3 class="pt-4 text-lg font-semibold">Brandde DP</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Create DP</a></li>
+                    <li><a href="#" class="hover:underline">Use DP</a></li>
+                </ul>
+            </div>
+
+            <!-- Brandde -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold">Brandde</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">Press</a></li>
+                    <li><a href="#" class="hover:underline">Contact Us</a></li>
+                    <li><a href="#" class="hover:underline">Help Center</a></li>
+                    <li><a href="#" class="hover:underline">How it Works</a></li>
+                    <li><a href="#" class="hover:underline">Privacy</a></li>
+                    <li><a href="#" class="hover:underline">Terms</a></li>
+                </ul>
+            </div>
+
+            <!-- Stay in the Loop -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold">Stay In The Loop</h3>
+                <p class="text-sm max-w-xs">
+                    Join our mailing list to stay in the loop with our newest
+                    for Event and concert.
+                </p>
+
+                <form class="pt-2">
+                    <div class="flex items-center bg-white rounded-full border-2 border-white overflow-hidden max-w-md">
+                        <input type="email" placeholder="Enter your email address.."
+                            class="flex-1 px-4 py-3 text-sm text-gray-700 placeholder-gray-400 focus:outline-none" />
+                        <button type="submit"
+                            class="px-6 py-3 bg-[#243CF4] text-white font-semibold text-sm whitespace-nowrap">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-white/20" />
+
+        <!-- Bottom copyright -->
+        <div class="flex justify-center">
+            <p class="text-sm font-medium">
+                Copyright © 2026 Brandde
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+</body>
+
+</html>
